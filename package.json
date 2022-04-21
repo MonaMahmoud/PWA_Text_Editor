@@ -1,25 +1,23 @@
 {
-  "name": "JATE",
+  "name": "pwa_text_editor",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start:dev": "",
-    "start": "",
-    "server": "",
-    "build": "",
-    "install": "",
-    "client": ""
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MonaMahmoud/PWA_Text_Editor.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.3",
-    "if-env": "^1.0.4"
+  "bugs": {
+    "url": "https://github.com/MonaMahmoud/PWA_Text_Editor/issues"
   },
-  "devDependencies": {
-    "concurrently": "^5.2.0",
-    "nodemon": "^2.0.4"
+  "homepage": "https://github.com/MonaMahmoud/PWA_Text_Editor#readme",
+  "dependencies": {
+    "webpack": "^5.72.0"
   }
 }
