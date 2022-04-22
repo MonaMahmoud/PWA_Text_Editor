@@ -1,23 +1,28 @@
 {
-  "name": "pwa_text_editor",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MonaMahmoud/PWA_Text_Editor.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MonaMahmoud/PWA_Text_Editor/issues"
-  },
-  "homepage": "https://github.com/MonaMahmoud/PWA_Text_Editor#readme",
-  "dependencies": {
-    "webpack": "^5.72.0"
-  }
+    "name": "pwa_text_editor",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
+        "start": "npm run build && cd server && node server.js",
+        "server": "cd server nodemon server.js --ignore client",
+        "build": "cd client && npm run build",
+        "install": "cd client && npm install",
+        "client": "cd client && npm start"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MonaMahmoud/PWA_Text_Editor.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/MonaMahmoud/PWA_Text_Editor/issues"
+    },
+    "homepage": "https://github.com/MonaMahmoud/PWA_Text_Editor#readme",
+    "dependencies": {
+        "webpack": "^5.72.0"
+    }
 }
