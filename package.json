@@ -23,6 +23,7 @@
     },
     "homepage": "https://github.com/MonaMahmoud/PWA_Text_Editor#readme",
     "dependencies": {
+        "express": "^4.17.3",
         "webpack": "^5.72.0"
     }
 }
