@@ -15,11 +15,32 @@ const initdb = async() =>
 // TODO: Add logic to a method that accepts some content and adds it to the database
 export const putDb = async(content) => {
     console.log('PUT to the database');
-    const jateDb = await openDB('jate', 1);
+    const jateDb = await openDB('jate', 1, {
+        upgrade(db) {
+            if (db.objectStoreNames.contains('jate')) {
+                console.log('jate database already exists');
+                return;
+            }
+            db.createObjectStore('jate', { keyPath: 'id', autoIncrement: true });
+            console.log('jate database created');
+        },
+    });
+
+
+
+    console.info('after line 18');
     const tx = jateDb.transaction('jate', 'readwrite');
+    console.info('after line 20');
+
     const store = tx.objectStore('jate');
-    const request = store.put({ id: id, jate: content });
+    console.info('after line 24');
+
+    const request = store.put({ jate: content });
+    console.info('after line 26');
+
     const result = await request;
+    console.info('after line 29');
+
     console.log('🚀 - data saved to the database', result);
 };
 
