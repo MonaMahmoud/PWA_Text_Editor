@@ -35,7 +35,7 @@ export const putDb = async(content) => {
     const store = tx.objectStore('jate');
     console.info('after line 24');
 
-    const request = store.put({ jate: content });
+    const request = store.put({ id: 1, jate: content });
     console.info('after line 26');
 
     const result = await request;
